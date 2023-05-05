@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/openingFragment">
+    app:startDestination="@id/topsRecyclerFragment">
 
     <fragment
         android:id="@+id/openingFragment"
         android:name="com.example.finalproject.openingFragment"
         android:label="fragment_opening"
         tools:layout="@layout/fragment_opening" />
+    <fragment
+        android:id="@+id/topsRecyclerFragment"
+        android:name="com.example.finalproject.TopsRecyclerFragment"
+        android:label="fragment_tops_recycler"
+        tools:layout="@layout/fragment_tops_recycler" />
 </navigation>

@@ -17,12 +17,13 @@ class WeatherViewModel: ViewModel() {
     val averageWeather: Int
         get() = _averageWeather
 
-    fun getWeather(){
+    fun getWeather() {
         val request = WeatherApi.weatherApi.getWeather()
-        request.enqueue(object: Callback<ApiResponse> {
+        request.enqueue(object : Callback<ApiResponse> {
             override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
                 Log.d("RESPONSE", "Failure: " + t.message)
             }
+
             override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
                 val weatherResponse: ApiResponse? = response.body()
                 val minTemp = weatherResponse?.minTemp
@@ -30,7 +31,7 @@ class WeatherViewModel: ViewModel() {
                 val currentTemp = weatherResponse?.temp
 
                 val _averageWeather = currentTemp
-                }
-            })
-        }
+            }
+        })
     }
+}

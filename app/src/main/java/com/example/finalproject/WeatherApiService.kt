@@ -14,16 +14,15 @@ private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
 
 private const val BASE_URL =
-    "https://api.api-ninjas.com/v1/"
+    "https://api.open-meteo.com/v1/"
 
 private val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFactory.create(moshi)).baseUrl(BASE_URL).build()
 
-private const val QUERY_STRING = "weather?city=18411"
+private const val QUERY_STRING = "forecast?latitude=41.48&longitude=-75.73&hourly=temperature_2m&current_weather=true&temperature_unit=fahrenheit&past_days=1"
 
 interface WeatherApiService {
     @GET(QUERY_STRING)
-    @Headers("Authorization: token ${"Erb6K2K+kVBBuzJpBqrAkA==MqAgu3aXERRGgkVZ"}")
-    fun getWeather(@Path("username") username: String): Call<ApiResponse>
+    fun getWeather(): Call<ApiResponse>
 }
 object WeatherApi{
     val weatherApi: WeatherApiService by lazy {
