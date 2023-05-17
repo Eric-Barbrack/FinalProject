@@ -6,12 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import com.example.finalproject.databinding.FragmentTopsRecyclerBinding
+import com.example.finalproject.databinding.FragmentBottomRecyclerBinding
 
-
-class TopsRecyclerFragment : Fragment() {
-    private var _binding: FragmentTopsRecyclerBinding? = null
+class BottomRecyclerFragment : Fragment() {
+    private var _binding: FragmentBottomRecyclerBinding? = null
     private val binding get() = _binding!!
     var currentWeather = 0.0
     private val viewModel: WeatherViewModel by viewModels()
@@ -21,7 +19,7 @@ class TopsRecyclerFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentTopsRecyclerBinding.inflate(inflater, container, false)
+        _binding = FragmentBottomRecyclerBinding.inflate(inflater, container, false)
         val rootView = binding.root
         viewModel.getWeather()
 
@@ -30,12 +28,12 @@ class TopsRecyclerFragment : Fragment() {
 
             var tops = listOf<Clothing>()
             if (currentWeather < 32) {
-                tops = ClothingLists.coldWeatherTops
+                tops = ClothingLists.coldWeatherBottoms
             } else if (currentWeather < 60) {
-                tops = ClothingLists.mediumWeatherTops
+                tops = ClothingLists.mediumWeatherBottoms
 
             } else {
-                tops = ClothingLists.warmWeatherTops
+                tops = ClothingLists.warmWeatherBottoms
             }
             val mAdapter = TopsAdapter(tops)
             binding.recyclerView.adapter = mAdapter
@@ -43,4 +41,3 @@ class TopsRecyclerFragment : Fragment() {
         return rootView
     }
 }
-

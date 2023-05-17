@@ -9,9 +9,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class WeatherViewModel: ViewModel() {
-    private val _response = MutableLiveData<Double?>()
-    val response: LiveData<Double?>
-        get() = _response
+    private val _weather = MutableLiveData<Double>()
+    val weather: LiveData<Double>
+        get() = _weather
 
 
     fun getWeather() {
@@ -26,7 +26,7 @@ class WeatherViewModel: ViewModel() {
                 val currentWeather = weatherResponse?.currentWeatherStats
                 val num : Double? = currentWeather?.temperature
                 if (num != null) {
-                    _response.value = num.toDouble()
+                    _weather.value = num.toDouble()
                 }
 
             }
