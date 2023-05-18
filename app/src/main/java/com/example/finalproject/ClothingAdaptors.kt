@@ -21,15 +21,15 @@ class TopsAdapter(val topsList: List<Clothing>): RecyclerView.Adapter<TopsViewHo
     }
 }
 
-class BottomAdapter(val bottomsList: List<Clothing>): RecyclerView.Adapter<TopsViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopsViewHolder {
+class BottomsAdapter(val bottomsList: List<Clothing>): RecyclerView.Adapter<BottomsViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BottomsViewHolder {
         val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TopsViewHolder(binding)
+        return BottomsViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: TopsViewHolder, position: Int) {
-        val currentTop = bottomsList[position]
-        holder.bindClothing(currentTop)
+    override fun onBindViewHolder(holder: BottomsViewHolder, position: Int) {
+        val currentBottom = bottomsList[position]
+        holder.bindClothing(currentBottom)
     }
 
     override fun getItemCount(): Int {

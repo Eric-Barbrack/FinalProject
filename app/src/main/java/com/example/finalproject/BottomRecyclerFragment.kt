@@ -14,28 +14,24 @@ class BottomRecyclerFragment : Fragment() {
     var currentWeather = 0.0
     private val viewModel: WeatherViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentBottomRecyclerBinding.inflate(inflater, container, false)
         val rootView = binding.root
         viewModel.getWeather()
 
         viewModel.weather.observe(viewLifecycleOwner) { retrievedTemp ->
-            currentWeather = retrievedTemp ?: 72.0
+            currentWeather = retrievedTemp ?: 0.0
 
-            var tops = listOf<Clothing>()
+            val bottoms: List<Clothing>
             if (currentWeather < 32) {
-                tops = ClothingLists.coldWeatherBottoms
+                bottoms = ClothingLists.coldWeatherBottoms
             } else if (currentWeather < 60) {
-                tops = ClothingLists.mediumWeatherBottoms
+                bottoms = ClothingLists.mediumWeatherBottoms
 
             } else {
-                tops = ClothingLists.warmWeatherBottoms
+                bottoms = ClothingLists.warmWeatherBottoms
             }
-            val mAdapter = TopsAdapter(tops)
+            val mAdapter = BottomsAdapter(bottoms)
             binding.recyclerView.adapter = mAdapter
         }
         return rootView

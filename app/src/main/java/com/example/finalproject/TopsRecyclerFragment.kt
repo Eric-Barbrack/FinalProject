@@ -26,7 +26,7 @@ class TopsRecyclerFragment : Fragment() {
         viewModel.getWeather()
 
         viewModel.weather.observe(viewLifecycleOwner) { retrievedTemp ->
-            currentWeather = retrievedTemp ?: 72.0
+            currentWeather = retrievedTemp ?: 0.0
 
             var tops = listOf<Clothing>()
             if (currentWeather < 32) {

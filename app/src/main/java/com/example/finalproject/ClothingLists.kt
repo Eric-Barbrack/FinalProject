@@ -3,7 +3,7 @@ package com.example.finalproject
 class ClothingLists {
     companion object {
         val coldWeatherTops = listOf(
-            Clothing("Heavy Work Jacket", R.drawable.stoneridgeworkjacket, 10),
+            Clothing("Cold Weather Tops", R.drawable.stoneridgeworkjacket, 10),
             Clothing("Heavy Plaid Flannel", R.drawable.heavyplaidflannel, -10),
             Clothing("Heavy Work Jacket", R.drawable.stoneridgeworkjacket, 10),
             Clothing("Heavy Plaid Flannel", R.drawable.heavyplaidflannel, -10),
@@ -16,7 +16,7 @@ class ClothingLists {
         )
 
         val mediumWeatherTops = listOf(
-            Clothing("Dress Shirt", R.drawable.dressshirt, 55),
+            Clothing("Medium Weather Tops", R.drawable.dressshirt, 55),
             Clothing("Red Plaid Flannel", R.drawable.redplaidflannel, 10),
             Clothing("Dress Shirt", R.drawable.dressshirt, 55),
             Clothing("Red Plaid Flannel", R.drawable.redplaidflannel, 10),
@@ -29,7 +29,7 @@ class ClothingLists {
         )
 
         val warmWeatherTops = listOf(
-            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Warm Tops", R.drawable.blacktee, 65),
             Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
             Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
             Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
@@ -42,7 +42,7 @@ class ClothingLists {
         )
 
         val coldWeatherBottoms = listOf(
-            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Cold Bottoms", R.drawable.blacktee, 65),
             Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
             Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
             Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
@@ -55,7 +55,7 @@ class ClothingLists {
         )
 
         val mediumWeatherBottoms = listOf(
-            Clothing("This is bottoms", R.drawable.blacktee, 65),
+            Clothing("Medium Bottoms", R.drawable.blacktee, 65),
             Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
             Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
             Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
@@ -68,7 +68,7 @@ class ClothingLists {
         )
 
         val warmWeatherBottoms = listOf(
-            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Warm Bottoms", R.drawable.blacktee, 65),
             Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
             Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
             Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
