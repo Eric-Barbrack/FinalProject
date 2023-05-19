@@ -79,5 +79,81 @@ class ClothingLists {
             Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
             Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
         )
+        val coldWeatherShoes = listOf(
+            Clothing("Cold Shoes", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65),
+            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
+        )
+
+        val mediumWeatherShoes = listOf(
+            Clothing("Medium Shoes", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65),
+            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
+        )
+
+        val warmWeatherShoes = listOf(
+            Clothing("Warm Shoes", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65),
+            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
+        )
+        val coldWeatherAccessories = listOf(
+            Clothing("Cold Accessories", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65),
+            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
+        )
+
+        val mediumWeatherAccessories = listOf(
+            Clothing("Medium Accessories", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65),
+            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
+        )
+
+        val warmWeatherAccessories = listOf(
+            Clothing("Warm Accessories", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65),
+            Clothing("Black T-Shirt", R.drawable.blacktee, 65),
+            Clothing("Balmain Designer T-shirt", R.drawable.blamaintee, 65),
+            Clothing("Black Collared Short-Sleve T-Shirt", R.drawable.blackcollared, 65),
+            Clothing("Navy Blue Tank Top", R.drawable.perfecttanktop, 65),
+            Clothing("Plaid Collared Short-Sleve T-Shirt", R.drawable.plaidcollared, 65)
+        )
     }
 }

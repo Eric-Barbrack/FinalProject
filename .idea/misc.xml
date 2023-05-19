@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_open_in_new_24.xml" value="0.267" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/accessory_item_layout.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/bottom_item_layout.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/bottom_list_item_layout.xml" value="0.13240740740740742" />
+        <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_accessories_recycler.xml" value="0.13240740740740742" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_bottom_recycler.xml" value="0.13240740740740742" />
+        <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_choose.xml" value="0.25" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_clothing_recycler.xml" value="0.22" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_opening.xml" value="0.25" />
+        <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_shoes_recycler.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_tops_recycler.xml" value="0.1" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/list_item_layout.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/barbracke23/AndroidStudioProjects/FinalProject/app/src/main/res/layout/list_layout_resource.xml" value="0.2677083333333333" />

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/bottomRecyclerFragment">
+    app:startDestination="@id/accessoriesRecyclerFragment">
 
     <fragment
         android:id="@+id/openingFragment"
@@ -20,4 +20,14 @@
         android:name="com.example.finalproject.BottomRecyclerFragment"
         android:label="fragment_bottom_recycler"
         tools:layout="@layout/fragment_bottom_recycler" />
+    <fragment
+        android:id="@+id/shoesRecyclerFragment"
+        android:name="com.example.finalproject.ShoesRecyclerFragment"
+        android:label="fragment_shoes_recycler"
+        tools:layout="@layout/fragment_shoes_recycler" />
+    <fragment
+        android:id="@+id/accessoriesRecyclerFragment"
+        android:name="com.example.finalproject.AccessoriesRecyclerFragment"
+        android:label="fragment_accessories_recycler"
+        tools:layout="@layout/fragment_accessories_recycler" />
 </navigation>
