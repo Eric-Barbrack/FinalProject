@@ -16,11 +16,7 @@ class TopsRecyclerFragment : Fragment() {
     var currentWeather = 0.0
     private val viewModel: WeatherViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentTopsRecyclerBinding.inflate(inflater, container, false)
         val rootView = binding.root
         viewModel.getWeather()
