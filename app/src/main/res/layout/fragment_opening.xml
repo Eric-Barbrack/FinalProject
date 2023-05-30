@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     app:layout_anchorGravity="center_horizontal"
-    tools:context=".openingFragment">
+    tools:context=".OpeningFragment">
 
 
     <TextView

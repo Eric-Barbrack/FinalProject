@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.databinding.ListItemLayoutBinding
 
-class TopsAdapter(val topsList: List<Clothing>): RecyclerView.Adapter<TopsViewHolder>() {
+class TopsAdapter(val topsList: List<Clothing>, val clothesViewModel: ClothingViewModel): RecyclerView.Adapter<TopsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopsViewHolder {
         val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TopsViewHolder(binding)
+        return TopsViewHolder(binding, clothesViewModel)
     }
 
     override fun onBindViewHolder(holder: TopsViewHolder, position: Int) {

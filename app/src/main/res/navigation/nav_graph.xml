@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/chooseFragment">
+    app:startDestination="@id/OpeningFragment">
 
     <fragment
-        android:id="@+id/openingFragment"
-        android:name="com.example.finalproject.openingFragment"
+        android:id="@+id/OpeningFragment"
+        android:name="com.example.finalproject.OpeningFragment"
         android:label="fragment_opening"
         tools:layout="@layout/fragment_opening" >
         <action
@@ -18,22 +18,39 @@
         android:id="@+id/topsRecyclerFragment"
         android:name="com.example.finalproject.TopsRecyclerFragment"
         android:label="fragment_tops_recycler"
-        tools:layout="@layout/fragment_tops_recycler" />
+        tools:layout="@layout/fragment_tops_recycler" >
+        <action
+            android:id="@+id/action_topsRecyclerFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
     <fragment
         android:id="@+id/bottomRecyclerFragment"
         android:name="com.example.finalproject.BottomRecyclerFragment"
         android:label="fragment_bottom_recycler"
-        tools:layout="@layout/fragment_bottom_recycler" />
+        tools:layout="@layout/fragment_bottom_recycler" >
+        <action
+            android:id="@+id/action_bottomRecyclerFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoesRecyclerFragment"
         android:name="com.example.finalproject.ShoesRecyclerFragment"
         android:label="fragment_shoes_recycler"
-        tools:layout="@layout/fragment_shoes_recycler" />
+        tools:layout="@layout/fragment_shoes_recycler" >
+        <action
+            android:id="@+id/action_shoesRecyclerFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accessoriesRecyclerFragment"
         android:name="com.example.finalproject.AccessoriesRecyclerFragment"
         android:label="fragment_accessories_recycler"
-        tools:layout="@layout/fragment_accessories_recycler" />
+        tools:layout="@layout/fragment_accessories_recycler" >
+        <action
+            android:id="@+id/action_accessoriesRecyclerFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/chooseFragment"
         android:name="com.example.finalproject.ChooseFragment"
@@ -51,5 +68,11 @@
         <action
             android:id="@+id/action_chooseFragment_to_accessoriesRecyclerFragment"
             app:destination="@id/accessoriesRecyclerFragment" />
+        <argument
+            android:name="imageResourcreValue"
+            app:argType="integer" />
+        <argument
+            android:name="whichButton"
+            app:argType="integer" />
     </fragment>
 </navigation>
