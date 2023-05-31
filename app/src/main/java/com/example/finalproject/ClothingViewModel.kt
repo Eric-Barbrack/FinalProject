@@ -11,13 +11,13 @@ class ClothingViewModel : ViewModel() {
     val bottomImageId: Int
         get() = _bottomImageId
 
-    private var _shoesImageId: Int = R.drawable.ic_baseline_open_in_new_24
-    val shoesImageId: Int
-        get() = _shoesImageId
+    private var _shoeImageId: Int = R.drawable.ic_baseline_open_in_new_24
+    val shoeImageId: Int
+        get() = _shoeImageId
 
-    private var _accessoriesImageId: Int = R.drawable.ic_baseline_open_in_new_24
-    val accessoriesImageId: Int
-        get() = _accessoriesImageId
+    private var _accessoryImageId: Int = R.drawable.ic_baseline_open_in_new_24
+    val accessoryImageId: Int
+        get() = _accessoryImageId
 
     fun setTopImageId(newId: Int) {
         _topImageId = newId
@@ -25,5 +25,13 @@ class ClothingViewModel : ViewModel() {
 
     fun setBottomImageId(newId: Int) {
         _bottomImageId = newId
+    }
+
+    fun setShoeImageId(newId: Int) {
+        _shoeImageId = newId
+    }
+
+    fun setAccessoryImageId(newId: Int) {
+        _accessoryImageId = newId
     }
 }

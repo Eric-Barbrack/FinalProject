@@ -21,10 +21,10 @@ class TopsAdapter(val topsList: List<Clothing>, val clothesViewModel: ClothingVi
     }
 }
 
-class BottomsAdapter(val bottomsList: List<Clothing>): RecyclerView.Adapter<BottomsViewHolder>() {
+class BottomsAdapter(val bottomsList: List<Clothing>, val clothesViewModel: ClothingViewModel): RecyclerView.Adapter<BottomsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BottomsViewHolder {
         val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return BottomsViewHolder(binding)
+        return BottomsViewHolder(binding, clothesViewModel)
     }
 
     override fun onBindViewHolder(holder: BottomsViewHolder, position: Int) {
@@ -37,15 +37,15 @@ class BottomsAdapter(val bottomsList: List<Clothing>): RecyclerView.Adapter<Bott
     }
 }
 
-class ShoeAdapter(val shoeList: List<Clothing>): RecyclerView.Adapter<ShoesViewHolder>() {
+class ShoeAdapter(val shoeList: List<Clothing>, val clothesViewModel: ClothingViewModel): RecyclerView.Adapter<ShoesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoesViewHolder {
         val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ShoesViewHolder(binding)
+        return ShoesViewHolder(binding, clothesViewModel)
     }
 
     override fun onBindViewHolder(holder: ShoesViewHolder, position: Int) {
-        val currentTop = shoeList[position]
-        holder.bindClothing(currentTop)
+        val currentShoe = shoeList[position]
+        holder.bindClothing(currentShoe)
     }
 
     override fun getItemCount(): Int {
@@ -53,15 +53,15 @@ class ShoeAdapter(val shoeList: List<Clothing>): RecyclerView.Adapter<ShoesViewH
     }
 }
 
-class AccessoryAdapter(val accessoryList: List<Clothing>): RecyclerView.Adapter<AccessoriesViewHolder>() {
+class AccessoryAdapter(val accessoryList: List<Clothing>, val clothesViewModel: ClothingViewModel): RecyclerView.Adapter<AccessoriesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccessoriesViewHolder {
         val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return AccessoriesViewHolder(binding)
+        return AccessoriesViewHolder(binding, clothesViewModel)
     }
 
     override fun onBindViewHolder(holder: AccessoriesViewHolder, position: Int) {
-        val currentTop = accessoryList[position]
-        holder.bindClothing(currentTop)
+        val currentAccessory = accessoryList[position]
+        holder.bindClothing(currentAccessory)
     }
 
     override fun getItemCount(): Int {

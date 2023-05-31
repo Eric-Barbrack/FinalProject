@@ -1,15 +1,17 @@
 package com.example.finalproject
 
+import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.databinding.ListItemLayoutBinding
 
-class AccessoriesViewHolder(val binding: ListItemLayoutBinding): RecyclerView.ViewHolder(binding.root) {
+class AccessoriesViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: ClothingViewModel): RecyclerView.ViewHolder(binding.root) {
     private lateinit var currentClothing: Clothing
 
     init{
         binding.root.setOnClickListener { view ->
             val imageVal = currentClothing.image
+            clothesViewModel.setAccessoryImageId(imageVal)
             val action = AccessoriesRecyclerFragmentDirections.actionAccessoriesRecyclerFragmentToChooseFragment(imageVal, 4)
             binding.root.findNavController().navigate(action)
         }

@@ -16,36 +16,28 @@ import com.example.finalproject.databinding.FragmentTopsRecyclerBinding
 class ChooseFragment : Fragment() {
     private var _binding: FragmentChooseBinding? = null
     private val binding get() = _binding!!
-    var topImageId : Int = 0
-    var bottomImageId : Int = 0
-    var shoesImageId : Int = 0
-    var accessoriesImageId : Int = 0
     private val clothesViewModel: ClothingViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
           _binding = FragmentChooseBinding.inflate(inflater, container, false)
           val rootView = binding.root
           val args = ChooseFragmentArgs.fromBundle(requireArguments())
-//
-//          topImageId = R.drawable.ic_baseline_open_in_new_24
-//        bottomImageId = R.drawable.ic_baseline_open_in_new_24
-//        shoesImageId = R.drawable.ic_baseline_open_in_new_24
-//        accessoriesImageId = R.drawable.ic_baseline_open_in_new_24
+
 
           binding.topsButton.setImageResource(clothesViewModel.topImageId)
-          binding.bottomsButton.setImageResource(bottomImageId)
-          binding.shoesButton.setImageResource(shoesImageId)
-          binding.accessoriesButton.setImageResource(accessoriesImageId)
+          binding.bottomsButton.setImageResource(clothesViewModel.bottomImageId)
+          binding.shoesButton.setImageResource(clothesViewModel.shoeImageId)
+          binding.accessoriesButton.setImageResource(clothesViewModel.accessoryImageId)
 
 
         if(args.whichButton == 1){
-              binding.topsButton.setImageResource(args.imageResourcreValue)
+              binding.topsButton.setImageResource(clothesViewModel.topImageId)
           } else if(args.whichButton == 2) {
-              binding.bottomsButton.setImageResource(args.imageResourcreValue)
+              binding.bottomsButton.setImageResource(clothesViewModel.bottomImageId)
           } else if(args.whichButton == 3){
-              binding.shoesButton.setImageResource(args.imageResourcreValue)
+              binding.shoesButton.setImageResource(clothesViewModel.shoeImageId)
           } else {
-              binding.accessoriesButton.setImageResource(args.imageResourcreValue)
+              binding.accessoriesButton.setImageResource(clothesViewModel.accessoryImageId)
           }
 
 
