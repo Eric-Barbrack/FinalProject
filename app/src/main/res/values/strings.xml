@@ -2,4 +2,9 @@
     <string name="app_name">Final Project</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="topsChosen">Please Pick a top!</string>
+    <string name="bottomsChosen">Please Pick a top!</string>
+    <string name="shoesChosen">Please Pick a top!</string>
+    <string name="accessoriesChosen">Please Pick a top!</string>
+
 </resources>

@@ -3,6 +3,7 @@ package com.example.finalproject
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.databinding.ListItemLayoutBinding
+import com.google.android.material.snackbar.Snackbar
 
 class ShoesViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: ClothingViewModel): RecyclerView.ViewHolder(binding.root) {
     private lateinit var currentClothing: Clothing
@@ -12,6 +13,7 @@ class ShoesViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Clot
             val imageVal = currentClothing.image
             clothesViewModel.setShoeImageId(imageVal)
             val action = ShoesRecyclerFragmentDirections.actionShoesRecyclerFragmentToChooseFragment(imageVal, 3)
+            Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)
         }
     }

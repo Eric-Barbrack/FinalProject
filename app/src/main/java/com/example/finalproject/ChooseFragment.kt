@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.example.finalproject.databinding.FragmentBottomRecyclerBinding
 import com.example.finalproject.databinding.FragmentChooseBinding
@@ -32,34 +33,48 @@ class ChooseFragment : Fragment() {
 
         if(args.whichButton == 1){
               binding.topsButton.setImageResource(clothesViewModel.topImageId)
+            clothesViewModel.setTopsBeenClicked()
           } else if(args.whichButton == 2) {
               binding.bottomsButton.setImageResource(clothesViewModel.bottomImageId)
+            clothesViewModel.setBottomsBeenClicked()
           } else if(args.whichButton == 3){
               binding.shoesButton.setImageResource(clothesViewModel.shoeImageId)
+            clothesViewModel.setShoesBeenClicked()
           } else {
               binding.accessoriesButton.setImageResource(clothesViewModel.accessoryImageId)
+            clothesViewModel.setAccessoriesBeenClicked()
           }
+
 
 
           binding.topsButton.setOnClickListener{
               val action = ChooseFragmentDirections.actionChooseFragmentToTopsRecyclerFragment()
+              Toast.makeText(activity, R.string.topsChosen, Toast.LENGTH_SHORT).show()
               rootView.findNavController().navigate(action)
           }
 
           binding.bottomsButton.setOnClickListener {
               val action = ChooseFragmentDirections.actionChooseFragmentToBottomRecyclerFragment()
+              Toast.makeText(activity, R.string.bottomsChosen, Toast.LENGTH_SHORT).show()
               rootView.findNavController().navigate(action)
           }
 
           binding.shoesButton.setOnClickListener {
               val action = ChooseFragmentDirections.actionChooseFragmentToShoesRecyclerFragment()
+              Toast.makeText(activity, R.string.shoesChosen, Toast.LENGTH_SHORT).show()
               rootView.findNavController().navigate(action)
           }
 
           binding.accessoriesButton.setOnClickListener {
               val action = ChooseFragmentDirections.actionChooseFragmentToAccessoriesRecyclerFragment()
+              Toast.makeText(activity, R.string.accessoriesChosen, Toast.LENGTH_SHORT).show()
               rootView.findNavController().navigate(action)
           }
+
+        binding.finishedButton.setOnClickListener{
+            val action = ChooseFragmentDirections.actionChooseFragmentToClosingScreenFragment()
+            rootView.findNavController().navigate(action)
+        }
 
 
           return rootView

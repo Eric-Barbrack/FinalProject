@@ -74,5 +74,13 @@
         <argument
             android:name="whichButton"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_chooseFragment_to_closingScreenFragment"
+            app:destination="@id/closingScreenFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/closingScreenFragment"
+        android:name="com.example.finalproject.ClosingScreenFragment"
+        android:label="fragment_closing_screen"
+        tools:layout="@layout/fragment_closing_screen" />
 </navigation>
