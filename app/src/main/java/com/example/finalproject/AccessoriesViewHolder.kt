@@ -13,6 +13,7 @@ class AccessoriesViewHolder(val binding: ListItemLayoutBinding, clothesViewModel
         binding.root.setOnClickListener { view ->
             val imageVal = currentClothing.image
             clothesViewModel.setAccessoryImageId(imageVal)
+            clothesViewModel.setAccessoriesBeenClicked()
             val action = AccessoriesRecyclerFragmentDirections.actionAccessoriesRecyclerFragmentToChooseFragment(imageVal, 4)
             Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)

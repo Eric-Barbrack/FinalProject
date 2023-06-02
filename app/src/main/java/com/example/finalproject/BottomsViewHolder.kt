@@ -12,6 +12,7 @@ class BottomsViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Cl
         binding.root.setOnClickListener { view ->
             val imageVal = currentClothing.image
             clothesViewModel.setBottomImageId(imageVal)
+            clothesViewModel.setBottomsBeenClicked()
             val action = BottomRecyclerFragmentDirections.actionBottomRecyclerFragmentToChooseFragment(imageVal, 2)
             Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)

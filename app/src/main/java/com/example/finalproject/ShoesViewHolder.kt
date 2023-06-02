@@ -12,6 +12,7 @@ class ShoesViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Clot
         binding.root.setOnClickListener { view ->
             val imageVal = currentClothing.image
             clothesViewModel.setShoeImageId(imageVal)
+            clothesViewModel.setShoesBeenClicked()
             val action = ShoesRecyclerFragmentDirections.actionShoesRecyclerFragmentToChooseFragment(imageVal, 3)
             Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)

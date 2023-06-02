@@ -33,16 +33,12 @@ class ChooseFragment : Fragment() {
 
         if(args.whichButton == 1){
               binding.topsButton.setImageResource(clothesViewModel.topImageId)
-            clothesViewModel.setTopsBeenClicked()
           } else if(args.whichButton == 2) {
               binding.bottomsButton.setImageResource(clothesViewModel.bottomImageId)
-            clothesViewModel.setBottomsBeenClicked()
           } else if(args.whichButton == 3){
               binding.shoesButton.setImageResource(clothesViewModel.shoeImageId)
-            clothesViewModel.setShoesBeenClicked()
           } else {
               binding.accessoriesButton.setImageResource(clothesViewModel.accessoryImageId)
-            clothesViewModel.setAccessoriesBeenClicked()
           }
 
 

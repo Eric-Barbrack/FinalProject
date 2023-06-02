@@ -14,6 +14,7 @@ class TopsViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Cloth
         binding.root.setOnClickListener { view ->
             val imageVal = currentClothing.image
             clothesViewModel.setTopImageId(imageVal)
+            clothesViewModel.setTopsBeenClicked()
             val action = TopsRecyclerFragmentDirections.actionTopsRecyclerFragmentToChooseFragment(imageVal, 1)
             Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)
