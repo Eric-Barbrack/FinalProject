@@ -30,9 +30,6 @@ class TopsRecyclerFragment : Fragment() {
             var tops = listOf<Clothing>()
             if (currentWeather < 32) {
                 tops = ClothingLists.coldWeatherTops
-            } else if (currentWeather < 60) {
-                tops = ClothingLists.mediumWeatherTops
-
             } else {
                 tops = ClothingLists.warmWeatherTops
             }

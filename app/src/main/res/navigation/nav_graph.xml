@@ -34,24 +34,6 @@
             app:destination="@id/chooseFragment" />
     </fragment>
     <fragment
-        android:id="@+id/shoesRecyclerFragment"
-        android:name="com.example.finalproject.ShoesRecyclerFragment"
-        android:label="fragment_shoes_recycler"
-        tools:layout="@layout/fragment_shoes_recycler" >
-        <action
-            android:id="@+id/action_shoesRecyclerFragment_to_chooseFragment"
-            app:destination="@id/chooseFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/accessoriesRecyclerFragment"
-        android:name="com.example.finalproject.AccessoriesRecyclerFragment"
-        android:label="fragment_accessories_recycler"
-        tools:layout="@layout/fragment_accessories_recycler" >
-        <action
-            android:id="@+id/action_accessoriesRecyclerFragment_to_chooseFragment"
-            app:destination="@id/chooseFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/chooseFragment"
         android:name="com.example.finalproject.ChooseFragment"
         android:label="fragment_choose"
@@ -62,12 +44,6 @@
         <action
             android:id="@+id/action_chooseFragment_to_bottomRecyclerFragment"
             app:destination="@id/bottomRecyclerFragment" />
-        <action
-            android:id="@+id/action_chooseFragment_to_shoesRecyclerFragment"
-            app:destination="@id/shoesRecyclerFragment" />
-        <action
-            android:id="@+id/action_chooseFragment_to_accessoriesRecyclerFragment"
-            app:destination="@id/accessoriesRecyclerFragment" />
         <argument
             android:name="imageResourcreValue"
             app:argType="integer" />

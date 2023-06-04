@@ -27,18 +27,11 @@ class ChooseFragment : Fragment() {
 
           binding.topsButton.setImageResource(clothesViewModel.topImageId)
           binding.bottomsButton.setImageResource(clothesViewModel.bottomImageId)
-          binding.shoesButton.setImageResource(clothesViewModel.shoeImageId)
-          binding.accessoriesButton.setImageResource(clothesViewModel.accessoryImageId)
-
 
         if(args.whichButton == 1){
               binding.topsButton.setImageResource(clothesViewModel.topImageId)
           } else if(args.whichButton == 2) {
               binding.bottomsButton.setImageResource(clothesViewModel.bottomImageId)
-          } else if(args.whichButton == 3){
-              binding.shoesButton.setImageResource(clothesViewModel.shoeImageId)
-          } else {
-              binding.accessoriesButton.setImageResource(clothesViewModel.accessoryImageId)
           }
 
 
@@ -54,19 +47,6 @@ class ChooseFragment : Fragment() {
               Toast.makeText(activity, R.string.bottomsChosen, Toast.LENGTH_SHORT).show()
               rootView.findNavController().navigate(action)
           }
-
-          binding.shoesButton.setOnClickListener {
-              val action = ChooseFragmentDirections.actionChooseFragmentToShoesRecyclerFragment()
-              Toast.makeText(activity, R.string.shoesChosen, Toast.LENGTH_SHORT).show()
-              rootView.findNavController().navigate(action)
-          }
-
-          binding.accessoriesButton.setOnClickListener {
-              val action = ChooseFragmentDirections.actionChooseFragmentToAccessoriesRecyclerFragment()
-              Toast.makeText(activity, R.string.accessoriesChosen, Toast.LENGTH_SHORT).show()
-              rootView.findNavController().navigate(action)
-          }
-
         binding.finishedButton.setOnClickListener{
             val action = ChooseFragmentDirections.actionChooseFragmentToClosingScreenFragment()
             rootView.findNavController().navigate(action)

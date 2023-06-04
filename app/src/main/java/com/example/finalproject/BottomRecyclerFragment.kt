@@ -27,9 +27,6 @@ class BottomRecyclerFragment : Fragment() {
             val bottoms: List<Clothing>
             if (currentWeather < 32) {
                 bottoms = ClothingLists.coldWeatherBottoms
-            } else if (currentWeather < 60) {
-                bottoms = ClothingLists.mediumWeatherBottoms
-
             } else {
                 bottoms = ClothingLists.warmWeatherBottoms
             }

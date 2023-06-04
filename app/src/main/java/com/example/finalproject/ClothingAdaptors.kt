@@ -36,35 +36,3 @@ class BottomsAdapter(val bottomsList: List<Clothing>, val clothesViewModel: Clot
         return bottomsList.size
     }
 }
-
-class ShoeAdapter(val shoeList: List<Clothing>, val clothesViewModel: ClothingViewModel): RecyclerView.Adapter<ShoesViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoesViewHolder {
-        val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ShoesViewHolder(binding, clothesViewModel)
-    }
-
-    override fun onBindViewHolder(holder: ShoesViewHolder, position: Int) {
-        val currentShoe = shoeList[position]
-        holder.bindClothing(currentShoe)
-    }
-
-    override fun getItemCount(): Int {
-        return shoeList.size
-    }
-}
-
-class AccessoryAdapter(val accessoryList: List<Clothing>, val clothesViewModel: ClothingViewModel): RecyclerView.Adapter<AccessoriesViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccessoriesViewHolder {
-        val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return AccessoriesViewHolder(binding, clothesViewModel)
-    }
-
-    override fun onBindViewHolder(holder: AccessoriesViewHolder, position: Int) {
-        val currentAccessory = accessoryList[position]
-        holder.bindClothing(currentAccessory)
-    }
-
-    override fun getItemCount(): Int {
-        return accessoryList.size
-    }
-}

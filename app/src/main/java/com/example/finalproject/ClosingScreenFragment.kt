@@ -53,12 +53,6 @@ class ClosingScreenFragment : Fragment() {
         if(clothesViewModel.bottomsBeenClicked) {
             totals = totals + 1
         }
-        if(clothesViewModel.shoesBeenClicked) {
-            totals = totals + 1
-        }
-        if(clothesViewModel.accessoriesBeenClicked) {
-            totals = totals + 1
-        }
 
 
 
