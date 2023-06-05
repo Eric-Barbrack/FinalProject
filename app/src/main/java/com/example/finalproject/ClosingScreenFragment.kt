@@ -16,53 +16,30 @@ class ClosingScreenFragment : Fragment() {
     private val binding get() = _binding!!
     private val clothesViewModel: ClothingViewModel by activityViewModels()
 
-    lateinit var vicMedia: MediaPlayer
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentClosingScreenBinding.inflate(inflater, container, false)
         val rootView = binding.root
-        vicMedia = MediaPlayer.create(context, R.raw.vic)
 
-        vicMedia.setLooping(true)
-        vicMedia.start()
-        binding.pause.setOnClickListener{
-            if(vicMedia.isPlaying()) {
-                binding.pause.setImageResource(R.drawable.ic_baseline_play_arrow_24)
-                vicMedia.pause()
-            } else {
-                binding.pause.setImageResource(R.drawable.ic_baseline_pause_24)
-                vicMedia.start()
-            }
+        binding.topsImage.setImageResource(clothesViewModel.topImageId)
+        binding.bottomsImage.setImageResource(clothesViewModel.bottomImageId)
 
+        if(clothesViewModel.bottomsBeenClicked == false){
+            binding.bottomsComment.text = getString(R.string.nopants)
+        } else{
+            binding.bottomsComment.text = getString(R.string.gotpants)
         }
 
-        binding.rewind.setOnClickListener {
-            val current = vicMedia.currentPosition
-            vicMedia.seekTo(current - 10000)
+        if(clothesViewModel.topsBeenClicked == false) {
+            binding.topsComment1.text = getString(R.string.noshirt)
+        } else {
+            binding.topsComment1.text = getString(R.string.gotshirt)
         }
-
-        binding.fastforward.setOnClickListener {
-            val current = vicMedia.currentPosition
-            vicMedia.seekTo(current + 10000)
-        }
-
-        var totals = 0
-        if(clothesViewModel.topsBeenClicked) {
-            totals = totals + 1
-        }
-        if(clothesViewModel.bottomsBeenClicked) {
-            totals = totals + 1
-        }
-
 
 
         return rootView
     }
 
-    override fun onStop() {
-        super.onStop()
-        vicMedia.release()
-    }
 
 
 }

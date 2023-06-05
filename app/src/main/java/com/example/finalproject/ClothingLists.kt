@@ -32,8 +32,8 @@ class ClothingLists {
             Clothing("Black Athletic Shorts", R.drawable.wb_blackathleticshorts, 65),
             Clothing("Black Khaki Shorts", R.drawable.wb_blackkhakishorts, 65),
             Clothing("Cargo Shorts", R.drawable.wb_cargoshorts, 65),
-            Clothing("Jean Shorts", R.drawable.wb_jeanshorts, 65),
-            Clothing("Jean Shorts With Holes", R.drawable.wb_jeanshortswithholes, 65),
+            Clothing("Light Blue Athletic Shorts", R.drawable.wb_lightblueathleticshorts_1, 65),
+            Clothing("Red Gym Shorts", R.drawable.wb_redgymshorts_1, 65),
         )
     }
 }

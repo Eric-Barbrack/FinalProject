@@ -13,7 +13,7 @@ class BottomsViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Cl
             val imageVal = currentClothing.image
             clothesViewModel.setBottomImageId(imageVal)
             clothesViewModel.setBottomsBeenClicked()
-            val action = BottomRecyclerFragmentDirections.actionBottomRecyclerFragmentToChooseFragment(imageVal, 2)
+            val action = BottomRecyclerFragmentDirections.actionBottomRecyclerFragmentToChooseFragment(2)
             Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)
         }
@@ -22,7 +22,6 @@ class BottomsViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Cl
     fun bindClothing(clothing: Clothing) {
         currentClothing = clothing
         binding.clothingName.text = currentClothing.name
-        binding.clothingWeather.text = currentClothing.weatherRange.toString()
         binding.clothingPicture.setImageResource(currentClothing.image)
     }
 }

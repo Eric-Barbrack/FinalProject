@@ -18,7 +18,7 @@ class OpeningFragment : Fragment() {
         val rootView = binding.root
 
         binding.button2.setOnClickListener{
-            val action = OpeningFragmentDirections.actionOpeningFragmentToChooseFragment(R.drawable.ic_baseline_open_in_new_24, 0)
+            val action = OpeningFragmentDirections.actionOpeningFragmentToInfromationFragment(binding.editText.getText().toString())
             rootView.findNavController().navigate(action)
         }
 

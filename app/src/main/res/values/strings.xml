@@ -7,4 +7,25 @@
     <string name="shoesChosen">Please Pick a top!</string>
     <string name="accessoriesChosen">Please Pick a top!</string>
 
+    <string name="paragraph1">Please enjoy the hard work that went into this app! If you are like me, everyone thinks that you have no sense of fashion due to the habbit of just throwing random stuff on early in the morning. Show them your true sense of style by allowing this app to help you plan ahead!</string>
+    <string name="paragraph2">Choose the articles of clothing you like the most. Your fit will be seen together in the next screen when you are done. If you change your mind you can always click on the image again to re-pick. </string>
+    <string name="exclamation">!</string>
+    <string name="welcome">Welcome</string>
+    <string name="tops">Tops</string>
+    <string name="bottoms">Bottoms</string>
+    <string name="fit">Pick Your Fit!</string>
+    <string name="finished">All Finished!</string>
+    <string name="nopants">Maybe you should put some pants on before you leave the house…</string>
+    <string name="gotpants">Excellent Choice!</string>
+    <string name="noshirt">You should probably find a shirt for the day…</string>
+    <string name="gotshirt">When did you get to stylish?</string>
+    <string name="friend">Mans Best Friend</string>
+    <string name="app">Clothing App</string>
+    <string name="hint">Please Enter Your First Name: </string>
+    <string name="ready">I am Ready!</string>
+    <string name="will">I Absolutely Will!</string>
+    <string name="whatever">User</string>
+    <string name="work">Awesome Work!</string>
+
+
 </resources>

@@ -15,7 +15,7 @@ class TopsViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Cloth
             val imageVal = currentClothing.image
             clothesViewModel.setTopImageId(imageVal)
             clothesViewModel.setTopsBeenClicked()
-            val action = TopsRecyclerFragmentDirections.actionTopsRecyclerFragmentToChooseFragment(imageVal, 1)
+            val action = TopsRecyclerFragmentDirections.actionTopsRecyclerFragmentToChooseFragment(1)
             Snackbar.make(view, "Good Choice!", Snackbar.LENGTH_SHORT).show()
             binding.root.findNavController().navigate(action)
         }
@@ -24,7 +24,6 @@ class TopsViewHolder(val binding: ListItemLayoutBinding, clothesViewModel: Cloth
     fun bindClothing(clothing: Clothing) {
         currentClothing = clothing
         binding.clothingName.text = currentClothing.name
-        binding.clothingWeather.text = currentClothing.weatherRange.toString()
         binding.clothingPicture.setImageResource(currentClothing.image)
     }
 }
